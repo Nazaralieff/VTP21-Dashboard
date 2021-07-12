@@ -1,0 +1,836 @@
+// ==================== Veriables ===========
+$primary-color : #24265D;
+$secondary-color : #51ADE5;
+$primary-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+// ======================= Main Parameters ============
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.display-none {
+  display: none;
+}
+
+// ====================== Responsive =================
+
+// ======================= Header ====================
+
+#header-block {
+  box-shadow: $primary-shadow;
+}
+
+#header-logo {
+  img {
+    margin: 10px 0;
+    width: 100px;
+  }
+}
+
+#header-manu {
+  li {
+    margin: 30px;
+    h3{
+      color: $primary-color;
+      transition: .3s;
+    }
+
+    &:last-child {
+      color: $primary-color;
+      margin-right: 0;
+      transition: .3s;
+      &:hover{
+        color: $secondary-color;
+      }
+    }
+    &:hover  h3{
+      color: $secondary-color;
+    }
+  }
+}
+
+// Account Block
+
+#acc-block {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+#acc-container {
+  padding: 50px 0 80px;
+  width: 30%;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  z-index: 7;
+  h4 {
+    text-align: center;
+    margin: 30px;
+    font-size: 2rem;
+    color: $primary-color;
+  }
+  .acc-input {
+    width: 70%;
+    margin: 3% 15%;
+  }
+  a{
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    transition: .2s;
+    &:hover{
+      text-decoration: underline;
+      color: $primary-color;
+    }
+  }
+}
+
+#acc-wrapper{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(170, 168, 168, 0.11);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6;
+}
+
+// ==================== Home ===================
+
+// Home Main
+
+#main-section{
+  width: 100%;
+  height: 90vh;
+  background-image: url(./SourceFiles//Home/Carousel/image1.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+}
+#main-section-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+transform: translate(-50%,-50%);
+  h1, h2{
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+}
+
+.home-section{
+  padding: 100px 0;
+}
+
+
+// Home Text
+
+#home-text-section{
+  h2{
+    font-size: 2rem;
+    color: $primary-color;
+  }
+  hr{
+    width: 80px;
+    border: 2px solid $primary-color;
+    margin: 15px 0;
+    
+  }
+  p{
+    line-height: 35px;
+    text-align: justify;
+  }
+}
+
+// Departments
+
+#home-departments-section{
+  h2{
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-size: 2rem;
+    color: $primary-color;
+    margin-bottom: 20px;
+    hr{
+      border : 2px solid $primary-color;
+      width: 50px;
+      margin: 15px 0;
+      
+    }
+  }
+}
+
+#home-departments{
+  width: 90%;
+}
+
+.home-departments-block{
+  width: 20%;
+  text-align: center;
+
+  img{
+    width: 60%;
+    margin-bottom: 20px;
+  }
+  h4{
+    margin-bottom: 10px;
+  }
+}
+
+// Home Counter
+
+#home-counter-section{
+  background-image: url('./SourceFiles/Home/counter.jpg');
+
+}
+
+#counter-block-flex{
+  width: 70%;
+}
+
+.counter-item{
+  width: 20%;
+  height: 250px;
+  border : 2px solid $primary-color;
+  color: $primary-color;
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  h3{
+    font-size: 1.3rem;
+  }
+  h4{
+    font-size: 3rem;
+  }
+}
+
+// Home Form 
+
+#home-form-text{
+  width: 46%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  
+  h3{
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+  p{
+    line-height: 35px;
+  }
+}
+
+#home-form{
+  width: 46%;
+  // border: 1px solid $primary-color;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  h5{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+  }
+}
+
+#home-form-wrapper{
+  margin: 100px;
+}
+.form-group{
+  width: 100%;
+}
+
+.home-form-group{
+  margin: 20px 0;
+}
+
+.home-form-input{
+  width: 100%;
+}
+
+#home-input-cv{
+  input{
+    display: none;
+  }
+}
+
+//=================== Statistic =================
+
+#statistic-block {
+  margin: 30px 0;
+}
+
+// Statistic Left
+#statistic-left {
+  width: 20%;
+}
+
+#sl-container {
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 20px;
+  height: 85vh;
+  h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  label {
+    margin-bottom: 10px;
+    h4 {
+      font-weight: 100;
+    }
+  }
+}
+
+// Statistic Right
+#statistic-right {
+  // margin-left: 26%;
+  width: 78%;
+  .sr-block {
+    width: 100%;
+    height: 600px;
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 30px 0;
+    .sr-block-name {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.chart {
+  width: 100%;
+  height: 100%;
+}
+
+.chart-block {
+  width: 100%;
+  height: 500px;
+}
+
+// Gender
+
+.gender-content {
+  width: 32%;
+  height: 150px;
+  border: 1px solid;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  div {
+    align-items: center;
+    h3 {
+      margin-right: 10px;
+      font-size: 1.5rem;
+      font-weight: 200;
+    }
+    span {
+      font-size: 3rem;
+    }
+  }
+}
+
+// Departments
+
+#departments-chart-block {
+  width: 60%;
+}
+
+#departments-chart-meaning {
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  ul {
+    width: 80%;
+    li {
+      width: 100%;
+      height: 50px;
+      margin-bottom: 15px;
+      border: 1px solid;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+    }
+  }
+}
+
+// Age
+
+#age-chart-block {
+  width: 70%;
+}
+
+#age-list {
+  width: 30%;
+
+  justify-content: center;
+  align-items: center;
+  ul {
+    width: 100%;
+    padding: 30px;
+    li {
+      width: 100%;
+      height: 30px;
+      border: 1px solid;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      padding: 3px;
+      text-align: center;
+    }
+  }
+}
+
+//Degree
+
+#degree-chart-block {
+  padding: 0 50px;
+}
+
+
+// ================== Mentors ==============
+
+#mentors-flex{
+  margin: 50px 0;
+}
+
+#mentor-list{
+  width: 30%;
+
+  li{
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.178);
+    border-radius: 10px;
+    height: 100px;
+    justify-content: start;
+    align-items: center;
+    transition: .3s;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    &:hover{
+      background-color: $secondary-color;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+
+    img{
+      height: 80%;
+      margin : 0 5%;
+      border : 1px solid;
+      border-radius: 100%;
+    }
+  }
+}
+
+.mentor-list-item{
+  margin-bottom: 20px;
+  
+}
+
+
+
+
+
+#mentor-data{
+  width: 68%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#mentor-data-container{
+  width: 100%;
+  border-radius: 10px;
+}
+
+#md-header{
+  width: 100%;
+  // height: 200px;
+  background-image: url('./SourceFiles/Home/counter.jpg') ;
+  background-position: center;
+  border-radius: 10px 10px 0 0;
+}
+#md-header-flex{
+  align-items: center;
+  justify-content: start;
+  padding: 40px 0;
+  justify-content:space-evenly;
+  hr{
+    border: 2px solid ;
+  }
+  #md-header-hr-left{
+    width: 3%;
+  }
+
+  #md-header-hr-right{
+    flex: 1;
+
+  }
+  img{
+    width: 20%;
+    border: 3px solid;
+    border-radius: 100%;
+    margin: 0 2%;
+    background-color: #fff;
+  }
+
+  h3{
+    margin: 0 2%;
+    font-size: 2rem;
+  }
+}
+#md-content{
+  width: 95%;
+  margin: auto;
+}
+
+#md-main{
+  padding: 40px;
+}
+
+#md-main-content{
+  width: 50%;
+}
+
+.md-main-category{
+  margin-bottom: 20px;
+  width: 100%;
+  justify-content: start;
+  div{
+    width: 23%;
+    span{
+      margin-right: 10px;
+    }
+  }
+  ul{
+    li{
+      margin-bottom: 10px;
+    }
+  }
+}
+
+#md-main-skill{
+  width: 50%;
+  height: 400px;
+  #mentor-chart{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#md-text{
+  margin: 40px 0;
+  padding: 0 15%;
+  text-align: center;
+  h5{
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+}
+
+#md-galery{
+  padding: 50px 0;
+  ul{
+    flex-wrap: wrap;
+    justify-content: center;
+    li{
+      width: 250px;
+      height: 250px;
+      justify-content: center;
+      align-items: center;
+      img{
+        width: 90%;
+        height: 90%;
+      }
+    }
+  }
+}
+
+#md-sosial-media{
+  ul{
+    justify-content: center;
+    li{
+      justify-content: start;
+      margin: 20px;
+      padding: 10px;
+      width: 20%;
+      border-radius: 5px;
+      color: #fff;
+      i{
+        margin-right: 10px;
+        font-size: 1.2rem;
+      }
+    }
+    .fb{
+      background-color: #3B5998;
+    }
+    .ins{
+      background-color: #DC5D94;
+    }
+    .in{
+      background-color: #0C66C1;
+    }
+  }
+}
+
+
+// ================= Members ==============
+
+#members{
+  margin: 30px 0;
+}
+
+#member-show{
+  width: 35%;
+  
+}
+#member-show-block{
+  // border: 1px solid;
+  border-radius: 20px;
+  padding: 20px 0 130px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#member-show-img{
+  width: 100%;
+  justify-content: center;
+  margin: 20px 0;
+  img{
+    width: 60%;
+    border : 1px solid;
+    border-radius: 100%;
+  }
+}
+
+#member-show-data{
+  padding: 0 100px;
+  justify-content: flex-start;
+  li{
+    height: 40px;
+  }
+}
+#member-show-data-answer{
+  margin-left: 50px;
+}
+
+// Member List 
+#member-list {
+  width: 63%;
+  ul{
+    flex-wrap: wrap;
+  }
+  li {
+    width: 49%;
+    height: 80px;
+    align-items: center;
+    padding: 0 30px;
+    border: 1px solid rgba(0, 0, 0, 0.178);;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    
+    &:hover{
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      border: 3px solid #fff;
+    }
+    .img{
+      width: 15%;
+      align-items: center;
+      justify-content: center;
+      img{
+        border-radius: 100%;
+        border: 1px solid;
+        width: 100%;
+      }
+    }
+    .member-data{
+      width: 80%;
+      align-items: center;
+      span{
+        background-color: red;
+        padding: 5px 15px;
+        border-radius: 5px;
+      }
+    }
+
+  }
+}
+
+
+
+// ====================== Account ==================
+
+#account-block{
+  padding: 50px 0;
+}
+
+#account-flex{
+  width: 100%;
+}
+
+#account-info{
+  width: 30%;
+}
+
+#acc-img{
+  padding: 20px 0;
+  justify-content: center;
+  img{
+    width: 60%;
+    border-radius: 100%;
+    border: 1px solid;
+  }
+}
+
+#acc-edit{
+  justify-content: center;
+  margin: 20px 0;
+}
+#acc-content-info{
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+#acc-info-data{
+  width: 80%;
+  margin: 50px auto;
+  justify-content: start;
+}
+
+#acc-questions{
+  margin-right: 50px;
+  li{
+    margin: 8px;
+  }
+}
+
+#acc-answers{
+  li{
+    margin: 8px ;
+  }
+}
+
+// Account Data
+
+#account-data{
+  width: 66%;
+
+}
+
+
+// Account Filter
+
+#acc-data-filter{
+  margin-bottom: 20px;
+  .acc-filter-btn{
+    width: 30%;
+  }
+}
+
+
+
+
+// Account Calendar
+
+#acc-calendar{
+  padding: 40px;
+  width: 100%;
+  height: 70vh;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+// Account Notes
+
+#acc-note-add{
+  width: 100%;
+  padding: 30px;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid;
+  margin-bottom: 20px;
+}
+
+.acc-note-input{
+  width: 78%
+}
+
+#acc-input-btn{
+  width: 20%;
+}
+
+#acc-note-list{
+  li{
+    width: 100%;
+    border: 1px solid;
+    margin: 10px 0;
+    padding: 20px 30px 20px 20px;
+    align-items: center;
+    &:last-child{
+      border-radius: 0 0 10px 10px;
+    }
+  }
+}
+
+
+// Account Value
+
+.acc-value-group{
+  border: 1px solid;
+  margin: 20px 0;
+  cursor: pointer;
+
+  border-radius: 10px;
+  h6{
+    letter-spacing: 1px;
+    padding: 20px 30px ;
+  }
+  span{
+    margin: 10px;
+    padding: 10px 13px;
+    border-radius: 100%;
+  }
+
+  &:hover  .acc-value-text{
+    height: 150px;
+  }
+}
+
+
+.acc-value-text{
+  padding: 0 30px;
+  height: 0;
+  align-items: center;
+  overflow: hidden;
+  line-height: 30px;
+  transition: all .5s;
+}
